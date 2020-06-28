@@ -1,8 +1,9 @@
-const people = require('../dummy/people');
+const {people, getPerson} = require('../dummy/people');
 
 const resolvers = {
   Query: {
-    people: () => people
+    people: () => people,
+    person: (_, {id}) => getPerson(id)
   }
 };
 

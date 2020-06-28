@@ -13,4 +13,10 @@ const people = [
   }
 ];
 
-module.exports = people;
+const getPerson = (id) =>
+  people.filter(({id: _id}) => id === _id)[0];
+
+module.exports = {
+  people,
+  getPerson
+};

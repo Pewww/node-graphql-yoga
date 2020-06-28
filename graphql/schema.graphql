@@ -7,4 +7,5 @@ type Person {
 
 type Query {
   people: [Person]!
+  person(id: String!): Person!
 }
