@@ -16,4 +16,5 @@ type Mutation {
     age: Int!
     gender: String!
   ): Person!
+  deletePerson(id: String!): Boolean!
 }

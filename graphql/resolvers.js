@@ -1,8 +1,13 @@
-const {people, getPerson, addPerson} = require('../dummy/people');
+const {
+  getPeople,
+  getPerson,
+  addPerson,
+  deletePerson
+} = require('../dummy/people');
 
 const resolvers = {
   Query: {
-    people: () => people,
+    people: () => getPeople(),
     person: (_, {id}) => getPerson(id)
   },
   Mutation: {
@@ -10,7 +15,8 @@ const resolvers = {
       name,
       age,
       gender
-    }) => addPerson(name, age, gender)
+    }) => addPerson(name, age, gender),
+    deletePerson: (_, {id}) => deletePerson(id)
   }
 };
 
