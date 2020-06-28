@@ -9,6 +9,10 @@
     "start": "nodemon"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "graphql-yoga": "^1.18.3"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0"
   }
 }
