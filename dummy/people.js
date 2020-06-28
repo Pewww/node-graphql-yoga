@@ -16,7 +16,21 @@ const people = [
 const getPerson = (id) =>
   people.filter(({id: _id}) => id === _id)[0];
 
+const addPerson = (name, age, gender) => {
+  const newPerson = {
+    id: String(people.length + 1),
+    name,
+    age,
+    gender
+  };
+
+  people.push(newPerson);
+
+  return newPerson;
+};
+
 module.exports = {
   people,
-  getPerson
+  getPerson,
+  addPerson
 };
