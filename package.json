@@ -1,0 +1,14 @@
+{
+  "name": "node-graphql-yoga",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Pewww/node-graphql-yoga.git",
+  "author": "Pewww <jung22337@naver.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "dependencies": {
+    "graphql-yoga": "^1.18.3"
+  }
+}
