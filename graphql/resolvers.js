@@ -4,11 +4,13 @@ const {
   addPerson,
   deletePerson
 } = require('../dummy/people');
+const {getMovies} = require('../apis/movie');
 
 const resolvers = {
   Query: {
     people: () => getPeople(),
-    person: (_, {id}) => getPerson(id)
+    person: (_, {id}) => getPerson(id),
+    movies: (_, {limit, rating}) => getMovies(limit, rating)
   },
   Mutation: {
     addPerson: (_, {
